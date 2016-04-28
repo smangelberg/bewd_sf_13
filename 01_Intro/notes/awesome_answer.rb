@@ -2,24 +2,25 @@ require 'pry-byebug'
 require 'pry'
 
 def start
-  puts "Do you want to look at a number? (Y or N)"
+  print "Prime-finder. Do you want to try (Y or N)? "
   answer = gets.chomp
-  while answer = "Y"
-    puts "what number?"
-    number_for_awesome_seeker = gets.chomp.to_i
-    awesome_seeker(number_for_awesome_seeker)
+  if answer == "Y"
+    print "This will find all prime numbers from 0 to whatever number you enter: "
+    number = gets.chomp.to_i
+    awesome_seeker(number)
+  else
+    puts "Shutting down"
   end
 end
 
+def loop_start
+  start
+end
+
 def awesome(number)
-  if number % 3 == 0 && number % 5 == 0
-    return puts "#{number}: divisible by 3 and 5."
-  elsif number % 3 == 0
-    return puts "#{number}: divisible by 3."
-  elsif number % 5 == 0
-    return puts "#{number}: divisble by 5."
-  elsif number.even?
-    return puts "#{number}: even."
+  while number > 0
+    number 
+    return
   else
     puts "#{number}: prime"
   end
@@ -32,3 +33,4 @@ def awesome_seeker(high_number)
 end
 
 start
+loop_start
