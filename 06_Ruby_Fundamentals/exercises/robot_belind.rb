@@ -28,15 +28,13 @@ class Robot
     @origin = origin
   end
 
-
-
   def self.random_robot_maker
     #randomly select name, type, origin, from three different arrays
     @name = ["Destructoid", "Kitten4000", "Hooman"].sample
     @type = ["four wheel","two wheel", "upright"].sample
     @origin = ["Belize", "China", "Canada"].sample
     robot = Robot.new(@name,@type,@origin)
-    puts "You created #{robot.name}, which is #{robot.type}. It was built in #{robot.origin}."
+    return robot
   end
 
   #depending on type of robot, they will have different attributes
@@ -44,6 +42,8 @@ class Robot
   def empathy
     if @name != "Destructoid"
       puts "*** COMMENCING HUG ***"
+    else
+      puts "No hugs bro!"
     end
   end
 
@@ -51,6 +51,8 @@ class Robot
   def kitten_skills
     if @name == "Kitten4000"
       puts "kitten town!"
+    else
+      puts "dogs for you"
     end
   end
 
@@ -64,13 +66,18 @@ class Robot
 
 end
 
-Robot.make_robots(10)
+puts "Welcome to the Robot Haus. How many robots do you need?"
+number_of_robots_requested = gets.chomp.to_i
 
-#class methods can be called outside of the class like Robot.make_robots(number)
-# for this class method, we just want to say, create as many robots as
-# a user wants...
-def make_robots(number)
-  number.times do
-    self.random_robot_maker
-  end
+robot_array = []
+
+number_of_robots_requested.times do
+  robot_array.push(Robot.random_robot_maker)
+end
+
+robot_array.each do |robot|
+  puts "You created #{robot.name}, which is #{robot.type}. It was built in #{robot.origin}."
+  robot.empathy
+  robot.kitten_skills
+  robot.fourty_mph_skills
 end
