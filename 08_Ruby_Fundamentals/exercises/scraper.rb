@@ -15,3 +15,7 @@ require 'csv'
 
 scraper = Mechanize.new
 scraper.history_added = Proc.new { sleep 1.0 }
+
+page = scraper.get('http://google.com')
+
+pp page
