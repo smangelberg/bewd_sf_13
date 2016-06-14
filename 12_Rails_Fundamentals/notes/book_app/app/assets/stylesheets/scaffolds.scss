@@ -4,12 +4,20 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+<<<<<<< HEAD
+=======
+  margin: 33px;
+>>>>>>> 69a21e41517a5c85387a5f133e9fed41dcf36da2
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+<<<<<<< HEAD
+=======
+  margin: 33px;
+>>>>>>> 69a21e41517a5c85387a5f133e9fed41dcf36da2
 }
 
 pre {
@@ -31,6 +39,19 @@ a {
   }
 }
 
+<<<<<<< HEAD
+=======
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+>>>>>>> 69a21e41517a5c85387a5f133e9fed41dcf36da2
 div {
   &.field, &.actions {
     margin-bottom: 10px;
@@ -61,7 +82,11 @@ div {
     padding: 5px 5px 5px 15px;
     font-size: 12px;
     margin: -7px;
+<<<<<<< HEAD
     margin-bottom: 0px;
+=======
+    margin-bottom: 0;
+>>>>>>> 69a21e41517a5c85387a5f133e9fed41dcf36da2
     background-color: #c00;
     color: #fff;
   }
@@ -71,3 +96,10 @@ div {
     list-style: square;
   }
 }
+<<<<<<< HEAD
+=======
+
+label {
+  display: block;
+}
+>>>>>>> 69a21e41517a5c85387a5f133e9fed41dcf36da2
